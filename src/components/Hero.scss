@@ -1,0 +1,229 @@
+$black: #000;
+$white: #fff;
+
+#home {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: visible; // blur kesilmasin
+    border-radius: 0px 0px 50px 50px;
+    box-shadow: 0 10px 200px -3px rgba(0, 0, 0, 0.712), 0 4px 36px -2px rgba(0, 0, 0, 0.37), 0 8px 234px -4px rgba(255, 0, 0, 0.699) inset;
+    // overflow: hidden;
+
+
+    // ✅ umumiy qora overlay (rasm usti)
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        pointer-events: none;
+        background: linear-gradient(to top,
+                rgba(0, 0, 0, .9),
+                rgba(0, 0, 0, .15),
+                rgba(0, 0, 0, .9));
+        border-radius: 0px 0px 50px 50px;
+
+    }
+
+    // ✅ pastki qismi: qoraroq + bulutli yumshoq chekka
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     left: -10%;
+    //     right: -10%;
+    //     bottom: -70px;
+    //     height: 220px; // biroz kichraytirdik
+    //     z-index: 6;
+    //     pointer-events: none;
+    //     border-radius: 0px 0px 50px 50px;
+
+    //     background:
+    //         radial-gradient(
+    //             ellipse at center,
+    //             rgba(0, 0, 0, .35) 0%,   // .55 edi → kamaytirildi
+    //             rgba(0, 0, 0, .20) 45%,
+    //             rgba(0, 0, 0, .08) 70%,
+    //             rgba(0, 0, 0, 0) 100%
+    //         ),
+    //         linear-gradient(
+    //             to top,
+    //             rgba(0, 0, 0, .55) 0%,   // .85 edi → kamaytirildi
+    //             rgba(0, 0, 0, .25) 45%,
+    //             rgba(0, 0, 0, 0) 100%
+    //         );
+
+    //     filter: blur(30px); // 35px edi → ozroq yumshoqroq
+    // }
+}
+
+.container1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(to top, $black, rgba(0, 0, 0, 0), $black);
+    border-radius: 0px 0px 50px 50px;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    #for_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: for_img 3s;
+        z-index: 1;
+    }
+
+    @keyframes for_img {
+        0% {
+            transform: scale(1.15);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    #infinte {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 15%;
+        z-index: 5;
+        animation: infinitea 5s cubic-bezier(0.25, 0.1, 0.25, 1) 1s forwards;
+    }
+
+    @keyframes infinitea {
+        0% {
+            width: 15%;
+        }
+
+        100% {
+            width: 45%;
+        }
+    }
+
+    // ✅ YER - transformni JS boshqaradi
+    #yer {
+        position: absolute;
+        left: 0;
+        bottom: -30%;
+        top: unset;
+        width: 110%;
+        z-index: 3;
+
+        opacity: 1; // ✅ ko‘rinadi
+        will-change: transform; // ✅ parallax smooth
+
+        // faqat opacity kirib kelishi
+        animation: yerFade 1.2s ease 0.8s forwards;
+        opacity: 0;
+    }
+
+    @keyframes yerFade {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+
+#yer {
+    position: absolute;
+    left: 0;
+    bottom: -30%; // Desktop versiya (o'zgarishsiz qoldi)
+    top: unset;
+    width: 110%; // Desktop versiya (o'zgarishsiz qoldi)
+    z-index: 3;
+    will-change: transform;
+    animation: yerFade 1.2s ease 0.8s forwards;
+    opacity: 0;
+
+    // ✅ FAQAT RESPONSIVE QISMI:
+
+    // Planshetlar uchun (ekran 1024px dan kichik bo'lganda)
+    @media (max-width: 1024px) {
+        width: 140%; // Yer biroz kengayadi
+        left: -20%; // Markazda qolishi uchun suramiz
+        bottom: -20%; // Biroz yuqoriga ko'taramiz
+    }
+
+    // Mobil telefonlar uchun (ekran 768px dan kichik bo'lganda)
+    @media (max-width: 768px) {
+        width: 180%; // Mobilda yer kichrayib ketmasligi uchun kenglikni oshiramiz
+        left: -40%; // Rasmni o'rtalash
+        bottom: -10%; // Yer ko'proq ko'rinishi uchun yuqoriga chiqaramiz
+    }
+
+    // Juda kichik telefonlar uchun (ekran 480px dan kichik bo'lganda)
+    @media (max-width: 480px) {
+        width: 230%; // Eng kichik ekranda ham "ufq" chizig'i ko'rinib turadi
+        left: -65%;
+        bottom: -5%; // Yo'q bo'lib ketmasligi uchun deyarli tepaga chiqardik
+    }
+}
+
+
+@media (max-width: 768px) {
+    #home {
+        height: 70vh;
+    }
+
+    .container1 {
+        height: 70vh;
+
+        #infinte {
+            width: 35%;
+            animation: infinitea 5s cubic-bezier(0.25, 0.1, 0.25, 1) 1s forwards;
+        }
+
+        @keyframes infinitea {
+            0% {
+                width: 35%;
+            }
+
+            100% {
+                width: 70%;
+            }
+        }
+
+        #yer {
+            bottom: -5%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    #home {
+        height: 60vh;
+    }
+
+    .container1 {
+        height: 60vh;
+
+        #infinte {
+            width: 50%;
+        }
+
+        @keyframes infinitea {
+            0% {
+                width: 50%;
+            }
+
+            100% {
+                width: 85%;
+            }
+        }
+    }
+}

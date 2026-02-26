@@ -1,0 +1,13 @@
+{
+  "name": "lead-server",
+  "type": "module",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2"
+  }
+}

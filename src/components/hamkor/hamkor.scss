@@ -1,0 +1,94 @@
+.sponsors {
+    padding: 60px 0;
+    background-color: #f9fafb;
+    overflow: hidden;
+
+    .sponsors__slider {
+        height: 30vh;
+        padding: 20px;
+    }
+
+    &__container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    &__head {
+        text-align: center;
+        margin-bottom: 40px;
+
+        .sponsors__title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .sponsors__subtitle {
+            color: #6b7280;
+            font-size: 16px;
+        }
+    }
+
+    &__slider {
+
+        // Silliq oqim uchun eng muhim qism:
+        .swiper-wrapper {
+            transition-timing-function: linear !important;
+        }
+
+        // Ikki chekka qismini yumshoq o'chirish (Fade effect)
+        mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%);
+    }
+
+    &__card {
+        height: 120px;
+        background: #ffffff;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        border: 1px solid #f3f4f6;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            border-color: #38bdf8;
+        }
+    }
+
+    &__logo {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        // Boshida kulrangroq bo'lishi uchun (xohlasangiz):
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+
+        .sponsors__card:hover & {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+    }
+}
+
+// Mobil moslashuv
+@media (max-width: 768px) {
+    .sponsors {
+        padding: 40px 0;
+
+        &__card {
+            height: 90px;
+            padding: 15px;
+        }
+    }
+}
