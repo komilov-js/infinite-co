@@ -13,6 +13,7 @@ import HowWeWork from "./HowWeWork.jsx";
 import Blog from "./Blog.jsx";
 import Hamkor from "./hamkor/hamkor.jsx";
 
+
 export default function Hero() {
   useEffect(() => {
     const el = document.getElementById("yer");

@@ -8,17 +8,27 @@ import "./hamkor.scss";
 
 // Rasmlar
 import Agent from "../imgs/agent.png";
-import Fondi from "../imgs/fondi.png";
-import Kasb from "../imgs/kasb.png";
+// import Fondi from "../imgs/fondi.png";
+import Kasb from "../imgs/markaz.png";
 import Digi from "../imgs/digi.png";
+import Uzb from '../imgs/uzbwomen11.png'
+import Akfa from '../imgs/akfabuild.png'
+import Qizlar from '../imgs/qizlar23.png'
 
 export default function Hamkorlar() {
   // Asl ma'lumotlar
   const data = [
     { id: 1, logo: Kasb, name: "Kasb" },
     { id: 2, logo: Agent, name: "Agent" },
-    { id: 3, logo: Fondi, name: "Fondi" },
+    // { id: 3, logo: Fondi, name: "Fondi" },
     { id: 4, logo: Digi, name: "Digi" },
+    { id: 5, logo: Uzb, name: "Uzbwomen" },
+    { id: 6, logo: Akfa, name: "Akfa build" },
+    { id: 7, logo: Qizlar, name: "Qizlar Raqamli Avlod" },
+
+
+
+    
   ];
 
   // Loop silliq ishlashi uchun ma'lumotni 3 marta ko'paytirib chiqaramiz

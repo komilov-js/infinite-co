@@ -71,6 +71,16 @@ export default function Projects() {
             ))}
           </Swiper>
         </div>
+        {/* ✅ Slider tagidan keyin button */}
+<div className="mt-10 flex justify-center">
+  <Link
+    to="/projects"
+    className="inline-flex items-center gap-2 rounded-2xl bg-white/10 border border-white/15 px-6 py-3 text-white font-semibold hover:bg-white/15 hover:border-white/25 transition"
+  >
+    Barcha loyihalar
+    <ArrowUpRight size={18} />
+  </Link>
+</div>
       </div>
     </section>
   );

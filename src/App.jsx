@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom"; // ✅ TO'G'RI
 import About from "./components/pages/about/about.jsx";
 import ProjectDetail from "./components/ProjectDetail.jsx";
 import ServiceLeadPage from "./components/ServiceLeadPage.jsx";
+import AllProjects from "./components/AllProjects.jsx";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           {/* About page */}
           <Route path="/about" element={<About />} />
           <Route path="/services/:slug" element={<ServiceLeadPage />} />
+          <Route path='/projects' element={<AllProjects />} />  
         </Routes>
       </main>
 
