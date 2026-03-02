@@ -36,18 +36,18 @@ export const services = [
     desc: "Biznesingiz uchun tezkor va qulay mobil ilovalar: UI/UX → backend → release.",
     bullets: ["UI/UX dizayn", "API bilan ulash", "Play Market / App Store tayyorlash"],
   },
-  {
-    slug: "cyber-audit",
-    icon: ShieldAlert,
-    title: "Kiberxavfsizlik (Audit)",
-    desc: "Sayt/CRM/server xavfsizligini tekshirish, zaifliklarni topish va tavsiyalar.",
-    bullets: ["Xavfsizlik auditi", "Konfiguratsiya & hardening", "Monitoring va log tavsiyalar"],
-  },
-  {
-    slug: "devops-security",
-    icon: Shield,
-    title: "Xavfsizlik & DevOps",
-    desc: "Server, monitoring, CI/CD, backup va xavfsiz konfiguratsiya.",
-    bullets: ["Docker/PM2/Nginx", "SSL, WAF tavsiyalar", "Log va alertlar"],
-  },
+  // {
+  //   slug: "cyber-audit",
+  //   icon: ShieldAlert,
+  //   title: "Kiberxavfsizlik (Audit)",
+  //   desc: "Sayt/CRM/server xavfsizligini tekshirish, zaifliklarni topish va tavsiyalar.",
+  //   bullets: ["Xavfsizlik auditi", "Konfiguratsiya & hardening", "Monitoring va log tavsiyalar"],
+  // },
+  // {
+  //   slug: "devops-security",
+  //   icon: Shield,
+  //   title: "Xavfsizlik & DevOps",
+  //   desc: "Server, monitoring, CI/CD, backup va xavfsiz konfiguratsiya.",
+  //   bullets: ["Docker/PM2/Nginx", "SSL, WAF tavsiyalar", "Log va alertlar"],
+  // },
 ];

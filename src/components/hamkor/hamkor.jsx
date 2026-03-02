@@ -14,6 +14,7 @@ import Digi from "../imgs/digi.png";
 import Uzb from '../imgs/uzbwomen11.png'
 import Akfa from '../imgs/akfabuild.png'
 import Qizlar from '../imgs/qizlar23.png'
+import Abdukarim from '../imgs/abdukarim.png'
 
 export default function Hamkorlar() {
   // Asl ma'lumotlar
@@ -25,6 +26,8 @@ export default function Hamkorlar() {
     { id: 5, logo: Uzb, name: "Uzbwomen" },
     { id: 6, logo: Akfa, name: "Akfa build" },
     { id: 7, logo: Qizlar, name: "Qizlar Raqamli Avlod" },
+    { id: 8, logo: Abdukarim, name: "Abdukarim-pdr" },
+
 
 
 
@@ -38,7 +41,7 @@ export default function Hamkorlar() {
     <section className="sponsors">
       <div className="sponsors__container">
         <div className="sponsors__head">
-          <h2 className="sponsors__title">Hamkorlarimiz</h2>
+          <h2 className="sponsors__title">Bizga Ishongan Kompaniyalar</h2>
           <p className="sponsors__subtitle">
             Ishonchli va yetakchi hamkorlarimiz bilan tanishing
           </p>

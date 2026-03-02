@@ -88,7 +88,7 @@ export default function Navbar() {
             href="tel:+998901234567"
             className="inline-flex items-center gap-2 text-[13px] font-semibold text-white"
           >
-            <PhoneCall size={16} /> +998 90 123 45 67
+            <PhoneCall size={16} /> +998 99 904 55 76
           </a>
 
           {/* <button

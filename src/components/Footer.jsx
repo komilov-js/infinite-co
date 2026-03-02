@@ -16,9 +16,9 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 relative py-12">
         <div className="grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <img src="/logo.png" alt="Tekly" className="h-7 w-auto" />
+            <img src="/logo.png" alt="Tekly" className="h-9 w-auto" />
             <p className="mt-4 text-[14px] text-white/75 max-w-[520px]">
-              Tekly — veb, CRM, avtomatlashtirish va DevOps xizmatlari. Maqsad: sizning biznesingizni tezroq o&apos;stirish.
+              INFINITE-CO — veb, CRM, avtomatlashtirish va DevOps xizmatlari. Maqsad: sizning biznesingizni tezroq o&apos;stirish.
             </p>
 
             <div className="mt-5 flex items-center gap-3">
@@ -90,7 +90,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-3 text-[13px] text-white/60">
-          <div>© {new Date().getFullYear()} Tekly. Barcha huquqlar himoyalangan.</div>
+          <div>© {new Date().getFullYear()} INFINITE-CO. Barcha huquqlar himoyalangan.</div>
           <div className="flex gap-5"></div>
         </div>
       </div>
