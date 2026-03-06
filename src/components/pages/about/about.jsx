@@ -1,113 +1,137 @@
 import React from "react";
 import Reveal from "../../Reveal";
-import { CheckCircle2, ArrowUpRight, Award, Zap, Users } from "lucide-react";
+import { CheckCircle2, ArrowDown, Award, Zap, Globe, Shield, Monitor, Smartphone, MessageSquare, Settings, Lock } from "lucide-react";
 
 export default function About() {
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="container-max">
+    <section className="bg-white overflow-hidden">
+      {/* 1. HERO IMAGE SECTION */}
+      <div className="relative h-[65vh] md:h-[80vh] w-[95%] mx-auto mt-6">
+        <div className="absolute inset-0 rounded-[3rem] overflow-hidden shadow-2xl border border-slate-100">
+          <img 
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80" 
+            alt="Infinite Co Workspace"
+            className="w-full h-full object-cover grayscale-[10%]"
+          />
+          <div className="absolute inset-0 bg-black/15" />
+        </div>
+        
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <Reveal>
+            <div className="relative">
+              {/* H1 orqasidagi shaffof fon */}
+              <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-2xl -inset-y-4 -inset-x-8 md:-inset-y-8 md:-inset-x-12 border border-white/20" />
+              <h1 className="relative z-10 text-5xl md:text-9xl font-black text-white tracking-tighter drop-shadow-lg">
+                INFINITE <span className="italic font-light opacity-90 text-sky-400">CO.</span>
+              </h1>
+            </div>
+
+            <div className="mt-12 flex flex-col items-center gap-3 text-white/80 relative z-10">
+              <p className="text-xs tracking-[0.3em] uppercase font-bold">Innovatsion yechimlar</p>
+              <ArrowDown size={14} className="animate-bounce" />
+            </div>
+          </Reveal>
+        </div>
+      </div>
+
+      {/* 2. MAIN CONTENT SECTION */}
+      <div className="container-max pb-32 -mt-16 relative z-20">
         <Reveal>
-          {/* TOP HEADER SECTION */}
-          <div className="max-w-4xl mb-20">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-[1px] w-12 bg-sky-600" />
-              <span className="text-sky-600 font-bold tracking-[0.2em] text-xs uppercase">
-                Infinite Co / 2022-2026
-              </span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-slate-900 tracking-tight leading-[1.1]">
-              Kelajakni kod bilan <br /> 
-              <span className="text-slate-400 italic">quramiz.</span>
-            </h1>
-          </div>
-
-          <div className="grid lg:grid-cols-12 gap-16">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
             
-            {/* LEFT SIDE: STORY & STATS */}
-            <div className="lg:col-span-5 space-y-12">
-              <div className="space-y-6">
-                <p className="text-xl text-slate-600 leading-relaxed font-medium">
-                  “INFINITE CO” — biznesingizni raqamli transformatsiya qilishda 
-                  sizning strategik hamkoringiz.
-                </p>
-                <p className="text-slate-500 leading-relaxed">
-                  2022-yilda asos solingan kompaniyamiz qisqa vaqt ichida IT Park rezidentiga aylandi. 
-                  Biz shunchaki kod yozmaymiz, biz biznesingiz samaradorligini oshiradigan 
-                  ekotizimlar yaratamiz.
-                </p>
-              </div>
-
-              {/* Minimalist Stats */}
-              <div className="grid grid-cols-2 gap-8 border-t border-slate-100 pt-10">
-                <div>
-                  <div className="text-3xl font-bold text-slate-900">2022</div>
-                  <div className="text-sm text-slate-500 mt-1 uppercase tracking-wider">Tashkil topgan</div>
+            {/* LEFT SIDE: STORY */}
+            <div className="lg:col-span-8 bg-white border border-slate-100 rounded-[3rem] p-8 md:p-16 shadow-sm">
+              <div className="max-w-3xl">
+                <div className="flex items-center gap-2 mb-8 text-sky-600">
+                  <div className="h-1 w-12 bg-sky-600 rounded-full" />
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Kompaniya haqida</span>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-sky-600 flex items-center">
-                    IT Park <ArrowUpRight size={20} className="ml-1" />
-                  </div>
-                  <div className="text-sm text-slate-500 mt-1 uppercase tracking-wider">Rezidentlik</div>
-                </div>
-              </div>
-
-              {/* Approach Tag */}
-              <div className="bg-slate-50 p-8 rounded-2xl relative overflow-hidden group">
-                <Zap className="absolute -right-4 -top-4 w-24 h-24 text-slate-100 group-hover:text-sky-100 transition-colors" />
-                <h4 className="font-bold text-slate-900 mb-2 relative z-10">Bizning missiya</h4>
-                <p className="text-sm text-slate-600 relative z-10">
-                  Biz uchun har bir loyiha — bu mas'uliyat. Biz mijoz talabini chuqur tahlil qilib, 
-                  optimal texnologiyalarni tanlaymiz va barqaror tizimlar yaratamiz.
-                </p>
-              </div>
-            </div>
-
-            {/* RIGHT SIDE: IMAGE & FEATURES */}
-            <div className="lg:col-span-7 relative">
-              {/* Image with Floating Elements */}
-              <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" 
-                  alt="Creative Team"
-                  className="w-full h-full object-cover shadow-inner"
-                />
                 
-                {/* Floating Badge */}
-                <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-2xl border border-white shadow-xl flex items-center justify-between">
-                   <div className="flex items-center gap-4">
-                      <div className="bg-sky-600 p-3 rounded-xl text-white">
-                        <Award size={24} />
-                      </div>
-                      <div>
-                        <div className="font-bold text-slate-900">Sifat Kafolati</div>
-                        <div className="text-xs text-slate-500 uppercase">Xalqaro standartlar</div>
-                      </div>
-                   </div>
-                   <div className="hidden sm:block text-right">
-                      <div className="text-sm font-bold text-slate-900">Cheksiz Imkoniyatlar</div>
-                      <div className="text-xs text-slate-400">Infinite Innovation</div>
-                   </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 tracking-tight leading-tight">
+                  Biz haqimizda
+                </h2>
+                
+                <div className="space-y-6 text-slate-600 text-[17px] leading-relaxed">
+                  <p>
+                    <span className="text-slate-900 font-bold">“INFINITE CO” MCHJ</span> 2022-yil 7-oktabr kuni tashkil etilgan bo‘lib, 
+                    2022-yil 19-dekabr sanasidan boshlab <span className="text-sky-600 font-semibold">"IT Park Uzbekistan"</span> rezidenti sifatida faoliyat yuritib kelmoqda.
+                  </p>
+                  <p>
+                    Kompaniyamiz qisqa vaqt ichida o‘zining ishonchli va innovatsion yondashuvi bilan ko‘plab tashkilotlar uchun zamonaviy dasturiy yechimlar ishlab chiqdi. 
+                    Bizning asosiy maqsadimiz — biznes jarayonlarni raqamlashtirish va mijozlarimizga yuqori samaradorlik olib keladigan IT mahsulotlarni yaratishdir.
+                  </p>
                 </div>
-              </div>
 
-              {/* Service Grid - Overlapping slightly */}
-              <div className="mt-8 grid sm:grid-cols-2 gap-4">
-                {[
-                  "Veb-platformalar",
-                  "Mobil ilovalar",
-                  "CRM / ERP tizimlar",
-                  "API Integratsiyalar"
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-3 p-4 border border-slate-100 rounded-xl hover:bg-slate-50 transition-colors cursor-default">
-                    <CheckCircle2 size={18} className="text-sky-600" />
-                    <span className="text-sm font-semibold text-slate-700">{item}</span>
+                {/* YO'NALISHLAR GRID */}
+                <div className="mt-16 pt-12 border-t border-slate-50">
+                  <h3 className="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider">Asosiy faoliyat yo‘nalishlarimiz:</h3>
+                  <div className="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+                    {[
+                      { icon: <Globe size={18} />, text: "Veb-sayt va veb-platformalar" },
+                      { icon: <Monitor size={18} />, text: "Desktop (kompyuter) dasturlar" },
+                      { icon: <Smartphone size={18} />, text: "Mobil ilovalar (Android/iOS)" },
+                      { icon: <MessageSquare size={18} />, text: "Telegram bot va tizimlar" },
+                      { icon: <Settings size={18} />, text: "Individual (custom) dasturlar" },
+                      { icon: <Lock size={18} />, text: "Axborot xavfsizligi" }
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-3 text-slate-700 hover:text-sky-600 transition-colors group">
+                        <div className="p-2 bg-slate-50 rounded-lg group-hover:bg-sky-50 transition-colors">
+                          {item.icon}
+                        </div>
+                        <span className="text-sm font-semibold">{item.text}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
 
+            {/* RIGHT SIDE: STATS & MISSION */}
+            <div className="lg:col-span-4 space-y-6">
+              <div className="bg-slate-900 rounded-[3rem] p-10 text-white h-full flex flex-col justify-between relative overflow-hidden group">
+                <div className="relative z-10">
+                   <h3 className="text-2xl font-bold mb-6 italic tracking-tight underline decoration-sky-500 underline-offset-8">Maqsadimiz</h3>
+                   <p className="text-slate-400 leading-relaxed text-[15px]">
+                      Har bir loyiha biz uchun oddiy buyurtma emas — bu hamkorlik va mas’uliyatdir. Biz zamonaviy arxitektura asosida kengaytiriladigan tizimlar yaratamiz.
+                   </p>
+                </div>
+                
+                <div className="mt-12 space-y-8 relative z-10">
+                   <div className="p-6 bg-white/5 rounded-[2rem] border border-white/10 backdrop-blur-sm">
+                      <div className="text-5xl font-black tracking-tighter">50<span className="text-sky-500">+</span></div>
+                      <p className="text-[10px] uppercase text-slate-500 tracking-widest mt-2">Muvaffaqiyatli loyihalar</p>
+                   </div>
+                   <div className="p-6 bg-white/5 rounded-[2rem] border border-white/10 backdrop-blur-sm">
+                      <div className="text-5xl font-black tracking-tighter text-sky-400">IT Park</div>
+                      <p className="text-[10px] uppercase text-slate-500 tracking-widest mt-2">Rasmiy rezidentlik</p>
+                   </div>
+                </div>
+              </div>
+            </div>
           </div>
         </Reveal>
+
+        {/* TECH STACK STRIP */}
+        <div className="mt-24">
+          <div className="flex flex-col items-center mb-10">
+            <div className="h-px w-12 bg-slate-200 mb-4" />
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.5em]">
+              Texnologik Stekimiz
+            </span>
+          </div>
+
+          <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-8 opacity-40 grayscale transition-all duration-700 hover:opacity-100 hover:grayscale-0 px-4">
+            {[
+              "Backend","Frontend",
+              "DRF", "API Integration", "Flutter", "Mobile", "Desktop"
+            ].map((tech) => (
+              <span key={tech} className="text-[11px] font-black tracking-[0.3em] uppercase text-slate-800">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );
